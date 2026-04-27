@@ -2,9 +2,6 @@
 import hidden_4
 
 if __name__ == "__main__":
-    # Moduldakı bütün adları al
-    names = dir(hidden_4)
-    # Qoşa alt xətt ilə başlamayanları seç və sırala
-    for name in sorted(names):
-        if not name.startswith("__"):
+    for name in sorted(dir(hidden_4)):
+        if name[:2] != "__":
             print(name)
