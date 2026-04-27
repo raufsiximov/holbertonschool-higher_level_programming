@@ -2,10 +2,9 @@
 import hidden_4
 
 if __name__ == "__main__":
-    # hidden_4 modulundakı bütün adları alırıq
+    # Moduldakı bütün adları al
     names = dir(hidden_4)
-    
-    # Adları sıralayırıq və "__" ilə başlamayanları çap edirik
+    # Qoşa alt xətt ilə başlamayanları seç və sırala
     for name in sorted(names):
         if not name.startswith("__"):
             print(name)
