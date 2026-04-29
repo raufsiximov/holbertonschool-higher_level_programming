@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Rectangle klasını təyin edən modul"""
+"""
+Bu modul Rectangle klasını təyin edir.
+"""
 
 
 class Rectangle:
-    """Boş bir Rectangle klası"""
+    """
+    Bu boş bir Rectangle klasıdır.
+    """
     pass
