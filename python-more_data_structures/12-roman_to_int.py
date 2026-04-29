@@ -15,8 +15,8 @@ def roman_to_int(roman_string):
     total = 0
 
     for i in range(len(roman_string)):
-        # Əgər cari rəqəm növbəti rəqəmdən kiçikdirsə, onu çıxırıq
-        if i + 1 < len(roman_string) and roman_map[roman_string[i]] < roman_map[roman_string[i+1]]:
+        if (i + 1 < len(roman_string) and
+                roman_map[roman_string[i]] < roman_map[roman_string[i + 1]]):
             total -= roman_map[roman_string[i]]
         else:
             total += roman_map[roman_string[i]]
