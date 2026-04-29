@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Bu modul MyList sinfini təqdim edir.
+This module defines a class MyList that inherits from list.
 """
 
 
 class MyList(list):
-    """list sinfindən miras alan sinif."""
+    """A class that inherits from list and adds a sorted print method."""
 
     def print_sorted(self):
-        """Siyahını artan sıra ilə çap edir (orijinalı dəyişmədən)."""
+        """Prints the list in ascending sorted order."""
         print(sorted(self))
