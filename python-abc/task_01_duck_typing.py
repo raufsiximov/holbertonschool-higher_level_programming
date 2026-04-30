@@ -4,7 +4,8 @@ import math
 class Circle:
     """Dairə sinifi"""
     def __init__(self, radius):
-        self.radius = radius
+        # Mənfi radius daxil edilərsə, mütləq qiymətini götürürük
+        self.radius = abs(radius)
 
     def area(self):
         """Dairənin sahəsini hesablayır"""
@@ -17,8 +18,9 @@ class Circle:
 class Rectangle:
     """Düzbucaqlı sinifi"""
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        # Ölçülərin mütləq qiymətini götürürük
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self):
         """Düzbucaqlının sahəsini hesablayır"""
@@ -29,10 +31,6 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
 def shape_info(shape):
-    """
-    Duck typing istifadə edərək fiqur haqqında məlumat çap edir.
-    Fiqurun Circle və ya Rectangle olmasının fərqi yoxdur, 
-    əsas odur ki, area() və perimeter() metodları olsun.
-    """
+    """Duck typing istifadə edərək məlumat çap edir"""
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
