@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Eyni klas və ya ondan törəmiş klas olub olmadığını yoxlayan funksiya"""
+"""Module that checks if an object is an instance of a class."""
 
 
 def is_kind_of_class(obj, a_class):
-    """Obyektin verilmiş klasın və ya ondan törəmiş klasın nümunəsi olub olmadığını yoxlayır"""
+    """Checks if obj is an instance of, or inherited from, a_class."""
     return isinstance(obj, a_class)
