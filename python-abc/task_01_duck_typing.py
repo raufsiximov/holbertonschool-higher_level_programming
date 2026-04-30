@@ -3,24 +3,24 @@ import math
 
 class Circle:
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
-        return abs(math.pi * (self.radius ** 2))
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        return abs(2 * math.pi * self.radius)
+        return 2 * math.pi * self.radius
 
 class Rectangle:
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self):
-        return abs(self.width * self.height)
+        return self.width * self.height
 
     def perimeter(self):
-        return abs(2 * (self.width + self.height))
+        return 2 * (self.width + self.height)
 
 def shape_info(shape):
     print("Area: {}".format(shape.area()))
