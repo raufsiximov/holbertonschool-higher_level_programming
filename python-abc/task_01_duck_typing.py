@@ -4,8 +4,8 @@ import math
 class Circle:
     """Dairə sinifi"""
     def __init__(self, radius):
-        # Mənfi radius daxil edilərsə, mütləq qiymətini götürürük
-        self.radius = abs(radius)
+        # abs() silindi, rəqəmi olduğu kimi saxlayırıq
+        self.radius = radius
 
     def area(self):
         """Dairənin sahəsini hesablayır"""
@@ -18,16 +18,16 @@ class Circle:
 class Rectangle:
     """Düzbucaqlı sinifi"""
     def __init__(self, width, height):
-        # Ölçülərin mütləq qiymətini götürürük
-        self.width = abs(width)
-        self.height = abs(height)
+        # abs() silindi, mənfi ölçüləri olduğu kimi qəbul edirik
+        self.width = width
+        self.height = height
 
     def area(self):
-        """Düzbucaqlının sahəsini hesablayır"""
+        """Düzbucaqlının sahəsini hesablayır: width * height"""
         return self.width * self.height
 
     def perimeter(self):
-        """Düzbucaqlının perimetrini hesablayır"""
+        """Düzbucaqlının perimetrini hesablayır: 2 * (width + height)"""
         return 2 * (self.width + self.height)
 
 def shape_info(shape):
