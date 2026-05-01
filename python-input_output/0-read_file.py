@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Faylı oxuyan və ekrana çap edən funksiya."""
+"""Bu modul fayl oxumaq üçün funksiyanı ehtiva edir."""
 
 
 def read_file(filename=""):
-    """UTF8 formatında olan mətni oxuyur və stdout-a çıxarır."""
+    """Faylı UTF8 olaraq oxuyur və ekrana çap edir."""
     with open(filename, encoding="utf-8") as f:
         print(f.read(), end="")
